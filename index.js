@@ -15,7 +15,6 @@ const generateMarkdown = require('./generateMarkdown')
 // // Function call to initialize app
 // init();
 
-// 
 // description, installation, usage, contributors, license, email, test, github, fact
 
 inquirer
@@ -46,7 +45,7 @@ inquirer
       message: 'do you have a license',
       name: 'license',
       choices: ['MIT' , 'BSD3' , 'APACHE2.0' , 'none']
-    }
+    },
     {
       type: 'input',
       message: 'How can people reach you?',
