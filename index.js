@@ -15,31 +15,57 @@ const generateMarkdown = require('./generateMarkdown')
 // // Function call to initialize app
 // init();
 
-//Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+// 
+// description, installation, usage, contributors, license, email, test, github, fact
 
 inquirer
   .prompt([
     {
       type: 'input',
-      message: 'What is your user name?',
-      name: 'username',
+      message: 'Please describe the application',
+      name: 'description',
     },
     {
       type: 'input',
-      message: 'What is your user name?',
-      name: 'username',
+      message: 'Please type installation instructions',
+      name: 'installation',
     },
     {
-      type: 'checkbox',
-      message: 'What is your favorite animal?',
-      name: 'animals',
-      choices: ['dog' , 'cat' , 'fish']
+      type: 'input',
+      message: 'How to use this application?',
+      name: 'usage',
+    },
+    {
+      type: 'list',
+      message: 'Did you have any other contributors?',
+      name: 'contributors',
+      choices: ['Yes, someone else helped me' , 'No, I did it all on my own' ,]
     },
     {
       type: 'list',
       message: 'do you have a license',
       name: 'license',
       choices: ['MIT' , 'BSD3' , 'APACHE2.0' , 'none']
+    }
+    {
+      type: 'input',
+      message: 'How can people reach you?',
+      name: 'email',
+    },
+    {
+      type: 'input',
+      message: 'List testing instructions',
+      name: 'test',
+    },
+    {
+      type: 'input',
+      message: 'What is your github webpage?',
+      name: 'github',
+    },
+    {
+      type: 'input',
+      message: 'List a fun fact for people to learn',
+      name: 'fact',
     }
   ]).then ((response) =>{
 console.log(response)
